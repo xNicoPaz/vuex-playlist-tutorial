@@ -7,7 +7,7 @@
 				<span class="price">ARS {{ product.price }}</span>
 			</li>
 		</ul>
-		<button @click="reducePrice">Reduce Price</button>
+		<button @click="reducePrice(4)">Reduce Price</button>
 	</div>
 </template>
 
@@ -23,8 +23,8 @@
 			}
 		},
 		methods: {
-			reducePrice(){
-				this.$store.dispatch('reducePrice');
+			reducePrice(amount){
+				this.$store.dispatch('reducePrice', amount);
 			}
 		}
 	}
